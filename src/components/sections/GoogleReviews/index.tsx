@@ -105,21 +105,26 @@ export function GoogleReviews() {
 
   return (
     <section className="py-20 bg-black" id="reviews">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Google Reviews</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+      <div className="max-w-[1920px] mx-auto px-6 sm:px-20 lg:px-32">
+        <AnimatedSection className="text-center mb-20">
+          <h2 className="text-5xl font-bold text-white mb-6">Google Reviews</h2>
+          <p className="text-gray-400 max-w-3xl mx-auto">
             See what our members say about us
           </p>
         </AnimatedSection>
         <div className="w-full aspect-video">
-          <iframe
-            ref={iframeRef}
-            src="https://widgets.sociablekit.com/google-reviews/iframe/25502969"
-            title="Google Reviews"
-            className="w-full h-full border-0"
-            loading="lazy"
-          />
+        <iframe
+  ref={iframeRef}
+  src="https://widgets.sociablekit.com/google-reviews/iframe/25502969"
+  title="Google Reviews"
+  className="w-full h-full border-0"
+  style={{
+    maxHeight: "90vh", // 90% of viewport height
+    height: "90vh",
+    width: "100%"
+  }}
+  loading="lazy"
+/>
         </div>
       </div>
     </section>
